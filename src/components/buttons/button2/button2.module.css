@@ -1,0 +1,76 @@
+.btn2 {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #e4d578;
+  border: 1px solid #a89d71;
+  cursor: pointer;
+  transition: 0.3s linear;
+  box-shadow: inset 1px -2px 5px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 25% / 50%;
+}
+
+.btn2 span {
+  width: 72.5px;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn2:hover {
+  background: #f1e27c;
+  animation: curved-border 2s linear infinite;
+}
+
+.btn2:hover span {
+  animation: sliding-text 2s linear infinite;
+}
+
+.btn2:link {
+  color: rgb(57, 83, 57);
+}
+
+.btn2:visited {
+  color: rgb(50, 54, 50);
+}
+
+@keyframes sliding-text {
+  0% {
+    left: 50%;
+  }
+  25% {
+    left: calc(75%);
+  }
+  50% {
+    left: 50%;
+  }
+  75% {
+    left: calc(25%);
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+@keyframes curved-border {
+  25% {
+    border-radius: 50% 15% 15% 50% / 50% 35% 35% 50%;
+    box-shadow: inset 20px 0 5px 1px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    border-radius: 25% / 50%;
+  }
+  75% {
+    border-radius: 15% 50% 50% 15% / 35% 50% 50% 35%;
+    box-shadow: inset -20px 0 5px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    border-radius: 25% / 50%;
+  }
+}
