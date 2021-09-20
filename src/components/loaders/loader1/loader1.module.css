@@ -1,0 +1,14 @@
+.container {
+  width: 3rem;
+  height: 3rem;
+  border: 5px solid rgb(233, 253, 199);
+  border-top-color: rgb(83, 231, 78);
+  border-radius: 50%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

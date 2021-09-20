@@ -1,18 +1,19 @@
 import BackToHome from '../BackToHome';
-import { buttons } from './buttonList';
+import { loaders } from './loaderList';
 
-const Buttons = () => {
+const Loaders = () => {
   return (
     <div className="category">
       <header className="header-container">
         <BackToHome />
-        <h1 className="category-title">Buttons</h1>
+        <h1 className="category-title">Loaders</h1>
       </header>
       <section className="category-section">
-        {buttons.map((button) => {
+        {loaders.map((loader) => {
+          console.log(loader);
           return (
-            <article className="items" key={button.id}>
-              {button.component}
+            <article className="items" key={loader.id}>
+              {loader.component}
             </article>
           );
         })}
@@ -21,4 +22,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default Loaders;

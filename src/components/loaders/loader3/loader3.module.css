@@ -1,0 +1,69 @@
+.ring {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 0.6rem;
+  color: #de4523;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #de4523;
+  box-shadow: inset 0 0 10px 2px #ddd;
+}
+
+.ring::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top-color: #de4523;
+  border-left-color: #de4523;
+  border-radius: 50%;
+  animation: animateRing 2s linear infinite;
+}
+
+.ring span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 2px;
+  transform-origin: left;
+  animation: animate 2s linear infinite;
+}
+
+.ring span::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #de4523;
+  top: -3px;
+  right: -6px;
+  box-shadow: 0 0 20px #de4523;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}
+@keyframes animateRing {
+  0% {
+    transform: rotate(0) scale(1.125);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.125);
+  }
+}
